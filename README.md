@@ -25,14 +25,11 @@ npm run test:unit
 npm run test:e2e
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
 
 ### Run the Docker Image from Repo
+```
 docker run -d -it -p 8080:8080 --rm --name WorkrFrontend ghcr.io/p7-cs-22-sw7-06/p7-client-frontend:main
-
+```
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
