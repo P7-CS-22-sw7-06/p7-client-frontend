@@ -6,12 +6,10 @@ name: Docker Publish
 # documentation.
 
 on:
-  schedule:
-    - cron: '15 23 * * *'
-  push:
-    branches: [ main, development ]
-  #pull_request:
-  #  branches: [ main, development ]
+  #push:
+    #branches: [main]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 env:
