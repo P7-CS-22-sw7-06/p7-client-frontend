@@ -1,17 +1,22 @@
 <template>
   <Header />
   <Vnetwork />
+  <div>
+    <FileUpload :maxSize="5" accept="py" />
+  </div>
 </template>
 
 <script>
 import Header from './components/Header.vue'
-import Vnetwork from './components/Vnetwork.vue';
+import Vnetwork from './components/Vnetwork.vue'
+import FileUpload from './components/UploadFile.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
-    Vnetwork
+    Vnetwork,
+    FileUpload
   }
 }
 </script>
