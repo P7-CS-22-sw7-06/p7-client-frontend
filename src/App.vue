@@ -1,14 +1,17 @@
 <template>
   <Header />
+  <Vnetwork />
 </template>
 
 <script>
 import Header from './components/Header.vue'
+import Vnetwork from './components/Vnetwork.vue';
 
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
+    Vnetwork
   }
 }
 </script>
@@ -22,6 +25,6 @@ export default {
   color: #0381ff;
   
   background-color: #292b2d;
-}
+} 
 
 </style>
