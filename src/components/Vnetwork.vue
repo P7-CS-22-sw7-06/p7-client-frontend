@@ -1,3 +1,13 @@
+<template>
+  <div>
+  <v-network-graph
+    class="graph"
+    :nodes="nodes"
+    :edges="edges"
+  />
+</div>
+</template>
+
 <script>
   const nodes = {
     node1: { name: "Node 1" },
@@ -20,19 +30,12 @@
   }
 </script>
 
-<template>
-  <v-network-graph
-    class="graph"
-    :nodes="nodes"
-    :edges="edges"
-  />
-</template>
-
 <style>
 .graph {
   width: 800px;
   height: 600px;
-  border: 1px solid rgb(240, 12, 12);
-  background-color: #678eb6;
+  border: 1px solid rgb(255, 255, 255);
+  background-color: #143553;
+  margin: auto;
 }
 </style>
