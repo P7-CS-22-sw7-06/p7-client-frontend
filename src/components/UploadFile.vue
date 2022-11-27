@@ -1,15 +1,7 @@
 <template>
   <div class="file-upload">
-    <div class="file-upload__area">
-      <input type="file" name="" id="" @change="handleFileChange($event)" />
-      <div
-            class="file-upload__error"
-            v-for="(error, index) in errors"
-            :key="index"
-          >
-          <span>{{ error }}</span>
-        </div>
-    </div>
+    <input type="file" @change="onFileSelected" multiple="true" ref="file">
+    <button @click="onUpload">Upload</button>
   </div>
 </template>
 
@@ -35,9 +27,8 @@
         name: "",
         size: 0,
         type: "",
-        fileExtention: "py",
+        fileExtention: "",
         url: "",
-        isImage: false,
         isUploaded: false,
         errors: [],
       },
@@ -46,6 +37,7 @@
   
   methods: {
     handleFileChange(e) {
+      
       this.errors = [];
       // Check if file is selected
       if (e.target.files && e.target.files[0]) {
@@ -58,11 +50,9 @@
             // Get file extention
             fileExtention = file.name.split(".").pop(),
             // Get file name
-            fileName = file.name.split(".").shift(),
-            // Check if file is .Py
-            isPy = ["py"].includes(fileExtention);
+            fileName = file.name.split(".").shift();
           // Print to console
-          console.log(fileSize, fileExtention, fileName, isPy);
+          console.log(fileSize, fileExtention, fileName);
         } else {
           console.log("Invalid file");
         }
@@ -82,9 +72,19 @@
         this.errors.push(`File type should be ${this.accept}`);
       }
     },
-    sendDataToParent() {
-      this.resetFileInput();
-      this.$emit("file-uploaded", this.file);
+    onUpload() {
+      console.log("Tickle me")
+      const formData = new FormData();
+
+      for( var i = 0; i < this.$refs.file.files.length; i++ ){
+        let file = this.$refs.file.files[i];
+        formData.append('files[' + i + ']', file);
+        console.log("Tickle me")
+        for (let obj of formData) {
+          console.log(obj)
+        }
+    }
+      // Hvor skal vi sende filen hen? 
     },
   },
    
