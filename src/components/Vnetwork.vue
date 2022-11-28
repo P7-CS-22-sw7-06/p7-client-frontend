@@ -9,6 +9,10 @@
 </template>
 
 <script>
+import { computed, ref, watch } from "vue"
+import * as vNG from "v-network-graph"
+//import data from "./data"
+import { Point } from "v-network-graph"
 
 
   export default {

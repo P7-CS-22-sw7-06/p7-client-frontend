@@ -32,6 +32,6 @@ export default {
   text-align: center;
   color: #0381ff;
   
-  background-color: #292b2d;
+  background-image: linear-gradient(rgb(45, 45, 42), rgb(86, 82, 82));
 } 
 </style>
