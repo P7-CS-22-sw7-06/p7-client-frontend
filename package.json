@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "node-polyfill-webpack-plugin": "^2.0.1",
+    "polyfills": "^1.9.5",
     "v-network-graph": "^0.7.0",
     "vue": "^3.2.13"
   },

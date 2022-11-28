@@ -1,5 +1,6 @@
 <template>
   <Header />
+  <ToolTipComponent/>
   <Vnetwork />
   <FileUpload :maxSize="999999" accept="" />
 </template>
@@ -8,14 +9,18 @@
 import Header from './components/Header.vue'
 import Vnetwork from './components/Vnetwork.vue'
 import FileUpload from './components/UploadFile.vue'
+import ToolTipComponent from './components/ToolTip.vue'
+
 
 export default {
   name: 'App',
   components: {
     Header,
+    ToolTipComponent,
     Vnetwork,
     FileUpload
-  }
+  },
+
 }
 </script>
 

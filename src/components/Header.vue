@@ -1,8 +1,12 @@
 <template>
     <h1>
+      <div>
+        <text>Welcome to</text>
+      </div>
       <div class = "header">
         <img src="../assets/workrsFontLogo.svg" alt="workrsFont">
       </div>
+      <div>About</div>
     </h1>
 </template>
 
@@ -20,4 +24,6 @@ export default {
 .header {
   scale: 50%;
 }
+
 </style>
+
