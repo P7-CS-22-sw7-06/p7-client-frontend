@@ -1,16 +1,29 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Header />
+  <BodyText />
+  <ToolTipComponent/>
+  <Vnetwork />
+  <FileUpload :maxSize="999999" accept="" />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue'
+import Vnetwork from './components/Vnetwork.vue'
+import FileUpload from './components/UploadFile.vue'
+import TooltipComponent from './components/ToolTip.vue'
+import BodyText from './components/BodyText.vue'
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    Header,
+    BodyText,
+    TooltipComponent,
+    Vnetwork,
+    FileUpload
+  },
+
 }
 </script>
 
@@ -20,7 +33,14 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #0381ff;
+  
+  background-image: linear-gradient(rgb(45, 45, 42), rgb(86, 82, 82));
+} 
+
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 </style>
