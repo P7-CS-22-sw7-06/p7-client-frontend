@@ -90,8 +90,26 @@
    
   };
   </script>
-  
+
+
   <style>
+  .file-upload {
+  height: 100vh;
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.file-upload .file-upload__area {
+  width: 200px;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #ccc;
+  margin-top: 40px;
+} 
   .file-upload .file-upload__error {
     margin-top: 10px;
     color: #f00;
@@ -99,11 +117,6 @@
   }
   .file-upload .upload-preview {
     text-align: center;
-  }
-  .file-upload .upload-preview .file-image {
-    width: 100%;
-    height: 300px;
-    object-fit: contain;
   }
   .file-upload .upload-preview .file-extention {
     height: 100px;
@@ -125,5 +138,8 @@
     color: #000;
     opacity: 0.5;
   }
-  
+  html, body {
+  margin: 0;
+  padding: 0;
+} 
   </style>

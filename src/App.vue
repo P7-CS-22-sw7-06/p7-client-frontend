@@ -1,5 +1,6 @@
 <template>
   <Header />
+  <BodyText />
   <ToolTipComponent/>
   <Vnetwork />
   <FileUpload :maxSize="999999" accept="" />
@@ -9,14 +10,16 @@
 import Header from './components/Header.vue'
 import Vnetwork from './components/Vnetwork.vue'
 import FileUpload from './components/UploadFile.vue'
-import ToolTipComponent from './components/ToolTip.vue'
+import TooltipComponent from './components/ToolTip.vue'
+import BodyText from './components/BodyText.vue'
 
 
 export default {
   name: 'App',
   components: {
     Header,
-    ToolTipComponent,
+    BodyText,
+    TooltipComponent,
     Vnetwork,
     FileUpload
   },
@@ -34,4 +37,10 @@ export default {
   
   background-image: linear-gradient(rgb(45, 45, 42), rgb(86, 82, 82));
 } 
+
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
 </style>

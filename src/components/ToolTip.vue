@@ -11,7 +11,7 @@
 <script>
 
 export default {
-    name: 'ToolTipComponent'
+    name: 'TooltipComponent'
 } 
 
 

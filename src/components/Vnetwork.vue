@@ -43,8 +43,9 @@ import { Point } from "v-network-graph"
 .graph {
   width: 800px;
   height: 600px;
+  scale: 100%;
   border: 1px solid rgb(255, 255, 255);
-  background-color: #143553;
+  background-image: linear-gradient(rgb(16, 14, 114), rgb(32, 77, 95));
   margin: auto;
 }
 

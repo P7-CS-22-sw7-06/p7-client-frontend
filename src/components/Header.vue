@@ -1,12 +1,8 @@
 <template>
     <h1>
-      <div>
-        <text>Welcome to</text>
-      </div>
       <div class = "header">
-        <img src="../assets/workrsFontLogo.svg" alt="workrsFont">
+        <img src="../assets/Aktiv-11.svg" alt="workrsFont">
       </div>
-      <div>About</div>
     </h1>
 </template>
 
@@ -22,8 +18,11 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped >
 .header {
-  scale: 50%;
+  scale: 70%;
 }
-
+html, header {
+  margin: 0;
+  padding: 0;
+}
 </style>
 
