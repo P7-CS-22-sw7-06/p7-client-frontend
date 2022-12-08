@@ -9,12 +9,12 @@
 </template>
 
 <script>
-
+/*
 export default {
     name: 'TooltipComponent'
 } 
 
-
+*/
 </script>
 
 <style>

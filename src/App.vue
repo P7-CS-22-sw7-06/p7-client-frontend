@@ -1,4 +1,8 @@
 <template>
+  <div id="nav">
+    <router-link v-if="authenticated" to="/home" v-on:click.native="logout()" replace>Logout</router-link>
+  </div>
+  <router-view @authenticated="setAuthenticated" />
   <Header />
   <BodyText />
   <ToolTipComponent/>
@@ -10,7 +14,6 @@
 import Header from './components/Header.vue'
 import Vnetwork from './components/Vnetwork.vue'
 import FileUpload from './components/UploadFile.vue'
-import TooltipComponent from './components/ToolTip.vue'
 import BodyText from './components/BodyText.vue'
 
 
@@ -19,7 +22,6 @@ export default {
   components: {
     Header,
     BodyText,
-    TooltipComponent,
     Vnetwork,
     FileUpload
   },
