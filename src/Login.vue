@@ -8,6 +8,8 @@
 </template>
 
 <script>
+    import { send } from 'send';
+    //let send = require('.send');
     export default {
         name: 'Login',
         data() {
@@ -20,17 +22,18 @@
         methods: {
             login() {
                 if(this.input.username != "") {
-                        this.$emit("authenticated", true);
-                        this.$router.replace({ name: "home" });
-                    } else {
-                        console.log("Please specify a username");
-                        let x = document.getElementById("snackbar");
-                        x.classname = "show";
-                        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-                    }
+                    this.$emit("authenticated", true);
+                    this.$router.replace({ name: "home" });
+                    send(username)
+                } else {
+                    console.log("Please specify a username");
+                    let x = document.getElementById("snackbar");
+                    x.classname = "show";
+                    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+                }
             },
+            }
         }
-    }
 </script>
 
 <style scoped>

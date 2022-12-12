@@ -10,9 +10,12 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "amqplib": "^0.10.3",
     "core-js": "^3.8.3",
     "node-polyfill-webpack-plugin": "^2.0.1",
     "polyfills": "^1.9.5",
+    "process": "^0.11.10",
+    "send": "^0.18.0",
     "v-network-graph": "^0.7.0",
     "vue": "^3.2.13",
     "vue-router": "^4.1.6"
