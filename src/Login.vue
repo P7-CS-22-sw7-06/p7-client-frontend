@@ -9,7 +9,7 @@
 
 <script>
     import { send } from 'send';
-    //let send = require('.send');
+    //let send = require('send');
     export default {
         name: 'Login',
         data() {
@@ -24,13 +24,14 @@
                 if(this.input.username != "") {
                     this.$emit("authenticated", true);
                     this.$router.replace({ name: "home" });
-                    send(username)
+                    //send();
                 } else {
                     console.log("Please specify a username");
                     let x = document.getElementById("snackbar");
                     x.classname = "show";
                     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
                 }
+        
             },
             }
         }

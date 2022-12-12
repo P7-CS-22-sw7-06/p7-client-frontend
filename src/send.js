@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-export default function send();
-void function send(username) {
+export { send }
 
+var send = function() {
     var amqp = require('amqplib/callback_api'); // Library
 
     amqp.connect('amqp://localhost', function(error0, connection) {
@@ -24,7 +24,10 @@ void function send(username) {
             console.log("Sent %s", msg);
         });
     }); // Connect to server
-};
+  }
+
+  
+
 
 
 
