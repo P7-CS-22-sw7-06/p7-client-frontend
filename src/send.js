@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 export { send }
 
-var send = function() {
+function send(username) {
     var amqp = require('amqplib/callback_api'); // Library
 
     amqp.connect('amqp://localhost', function(error0, connection) {
@@ -13,7 +13,7 @@ var send = function() {
             if(error1){
                 throw error1;
             }
-            var queue = 'queue'; // queue to send to
+            var queue = queue1; // queue to send to
             var msg = username; // message to send
     
             channel.assertQueue(queue, {
